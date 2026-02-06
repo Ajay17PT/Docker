@@ -3,35 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Project - Welcome</title>
+    <title>User Profile Card</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f9;
-            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
-        .container {
-            text-align: center;
+        .card {
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            width: 320px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
-        h1 { color: #2c3e50; }
-        p { font-size: 1.2rem; }
-        .status { color: #27ae60; font-weight: bold; }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #007bff;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+        }
+        .status-badge {
+            background: #28a745;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        h2 { margin: 10px 0 5px; color: #333; }
+        p { color: #666; font-size: 14px; line-height: 1.5; }
+        .skills {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+        .tag {
+            background: #eee;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello from Docker!</h1>
-        <p>This is a sample HTML page running on an <strong>Apache</strong> web server.</p>
-        <p class="status">Build Status: Pipeline Successful ✅</p>
-    </div>
+
+    <section class="card">
+        <div class="profile-img">JD</div>
+        <span class="status-badge">Available for Hire</span>
+        <h2>Jane Doe</h2>
+        <p>Full-stack developer specializing in building clean, functional, and user-friendly web applications.</p>
+        
+        <div class="skills">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
+        </div>
+    </section>
+
 </body>
 </html>
